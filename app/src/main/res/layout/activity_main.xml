@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bgmain"
+    android:orientation="vertical"
+    android:paddingTop="45dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <!--    Location    -->
+        <LinearLayout
+            android:id="@+id/addressContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--      Address      -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="Location"
+                    android:textColor="@android:color/white"
+                    android:textSize="30dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_location" />
+
+            </LinearLayout>
+            <!--      Akhir Address      -->
+
+            <!--      Date      -->
+            <TextView
+                android:id="@+id/updated_at"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinslight"
+                android:text="tanggal/bulan/tahun"
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
+            <!--      Akhir Date      -->
+
+
+        </LinearLayout>
+        <!--    Akhir Location    -->
+
+        <!--    Main Content    -->
+        <LinearLayout
+            android:id="@+id/overviewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="110dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+
+            <!--     Main Content Left       -->
+            <!--      Akhir Main Content Left      -->
+
+            <LinearLayout
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <!--     Temp       -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="110dp">
+
+                    <TextView
+                        android:id="@+id/temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="21"
+                        android:textColor="@color/white"
+                        android:textSize="96sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:paddingTop="22dp"
+                        android:text="°C"
+                        android:textColor="@color/white"
+                        android:textSize="32sp" />
+
+                </LinearLayout>
+                <!--      Akhir Temp      -->
+
+                <!--     Status       -->
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:paddingLeft="5dp"
+                    android:text="status"
+                    android:textColor="@color/white"
+                    android:textSize="26sp" />
+                <!--      Akhir Status      -->
+
+                <!--        Min Temp        -->
+                <TextView
+                    android:id="@+id/temp_min"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppinslight"
+                    android:paddingLeft="5dp"
+                    android:text="Min Temp : 17°C"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+                <!--     Akhir Min Temp       -->
+
+                <!--        Max Temp       -->
+                <TextView
+                    android:id="@+id/temp_max"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppinslight"
+                    android:paddingLeft="5dp"
+                    android:text="Max Temp : 27°C"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+                <!--     Akhir Max Temp       -->
+
+                <!--        Clouds        -->
+                <TextView
+                    android:id="@+id/awan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppinslight"
+                    android:paddingLeft="5dp"
+                    android:text="Kondisi Awan : 10%"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+                <!--     Akhir clouds       -->
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="228dp"
+                android:layout_height="228dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/main" />
+
+
+        </LinearLayout>
+        <!--    Akhir Main Content    -->
+
+        <!--    Second Content    -->
+        <LinearLayout
+            android:id="@+id/detailsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bgsecond"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="25dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="50dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="Kondisi Hari Ini"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+            <!--      Details Horizontal Atas     -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <!--        Content Details Atas      -->
+
+                <LinearLayout
+                    android:id="@+id/tes"
+                    android:layout_width="0dp"
+                    android:layout_height="240dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/detail_rounded"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Terbit"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/main" />
+
+                    <TextView
+                        android:id="@+id/terbit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="240dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/detail_rounded"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Terbenam"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/splash1" />
+
+                    <TextView
+                        android:id="@+id/terbenam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="240dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/detail_rounded"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Angin"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/wind"
+                        android:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/angin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+                <!--        Akhir Content Details Atas       -->
+
+            </LinearLayout>
+            <!--      Akhir Details Horizontal Atas     -->
+
+            <!--      Details Horizontal Bawah     -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <!--        Content Details Bawah       -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="240dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/detail_rounded"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Tekanan"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginBottom="12dp"
+                        android:src="@drawable/pressure"
+                        android:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tekanan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="240dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/detail_rounded"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Kelembaban"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginBottom="9dp"
+                        android:src="@drawable/humidity"
+                        android:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/kelembaban"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="240dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/detail_rounded"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Negara"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="90dp"
+                        android:layout_marginBottom="12dp"
+                        android:src="@drawable/country"
+                        android:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/negara"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+                <!--        Akhir Content Details Bawah       -->
+
+            </LinearLayout>
+            <!--      Akhir Details Horizontal      -->
+
+        </LinearLayout>
+        <!--    Akhir Second Content    -->
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+    </ProgressBar>
+
+    <!--  Error  -->
+    <LinearLayout
+        android:id="@+id/errortext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginBottom="45dp"
+        android:gravity="center_horizontal"
+        android:paddingTop="300dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/error"
+            android:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Upss...Something Went Wrong!!"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+    <!-- Akhir Error -->
+
+</RelativeLayout>
